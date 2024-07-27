@@ -1,4 +1,4 @@
-Question 2: Loading MNIST data
+# Question 2: Loading MNIST data
 def parse_mnist(image_filesname, label_filename):
     """ Read an images and labels file in MNIST format.  See this page:
     http://yann.lecun.com/exdb/mnist/ for a description of the file format.
@@ -30,8 +30,8 @@ def parse_mnist(image_filesname, label_filename):
     ## 解析idx3(image)文件
     bin_data = open(image_filesname, 'rb').read()     # 读取二进制数据
 
-    # 解析文件头信息，依次为魔数、图片数量、每张图片高、每张图片宽，这里未对魔数进行存储，因此struct.unpack_from的
-    #第一个返回值为_offset = 0
+    # 解析文件头信息，依次为魔数、图片数量、每张图片高、每张图片宽，这里未对魔数进行存储，因此struct.unpack_from的第一个返回值为_
+    offset = 0
     fmt_header = '>iiii'     #这里的i代表整型数据，四个i代表有四个整形数字，>是为了解决对齐问题加入的字符
     #struct.unpack_from(fmt=,buffer=,offfset=)该函数可以将缓冲区buffer中的内容在按照指定的
     #格式fmt='somenformat'，从偏移量为offset=numb的位置开始进行读取。返回的是一个对应的元组tuple

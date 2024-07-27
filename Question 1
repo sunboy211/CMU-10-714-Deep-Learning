@@ -1,0 +1,16 @@
+Question 1: A basic add function, and testing/autograding basics
+def add(x, y):
+    """ A trivial 'add' function you should implement to get used to the 
+    autograder and submission system.  The solution to this problem is in the
+    the homework notebook.
+
+    Args:
+        x (Python number or numpy array)
+        y (Python number or numpy array)
+
+    Return:
+        Sum of x + y
+    """
+    ### YOUR CODE HERE
+    return x + y
+    ### END YOUR CODE
